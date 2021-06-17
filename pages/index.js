@@ -1,5 +1,5 @@
-const ProfileInfoTitle = document.querySelector('.profile__info_title');
-const ProfileInfoSubtitle = document.querySelector('.profile__info_subtitle');
+const ProfileInfoTitle = document.querySelector('.profile__info-title');
+const ProfileInfoSubtitle = document.querySelector('.profile__info-subtitle');
 const PopupOpenButtonElement = document.querySelector('.profile__edit-button');
 const PopupElement = document.querySelector('.popup');
 const PopupCloseButtonElement = PopupElement.querySelector('.popup__close-button');
