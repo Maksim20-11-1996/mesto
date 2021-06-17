@@ -1,4 +1,4 @@
-.elements {
+.cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-    .elements {
+    .cards {
         justify-content: space-around;
         margin-bottom: 28px;
     }
