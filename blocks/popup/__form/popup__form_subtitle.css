@@ -1,4 +1,4 @@
-.popup__form_title {
+.popup__form-subtitle {
     min-width: 358px;
     font-family: 'Inter','Arial',sans-serif;
     font-style: normal;
@@ -7,12 +7,13 @@
     line-height: 17px;
     border: none;
     border-bottom: 1px solid #000;
-    margin: 0 auto 30px;
+    margin: 0 auto 48px;
     padding-bottom: 13px;
 }
 
 @media screen and (max-width: 767px) {
-    .popup__form_title {
+    .popup__form-subtitle {
         min-width: 238px;
+        margin: 0 auto 45px;
     }
 }
