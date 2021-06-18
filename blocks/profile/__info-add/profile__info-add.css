@@ -1,0 +1,11 @@
+.profile__info-add {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__info-add {
+        position: relative;
+    }
+}
