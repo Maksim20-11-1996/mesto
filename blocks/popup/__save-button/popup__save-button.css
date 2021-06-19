@@ -3,7 +3,7 @@
     min-width: 358px;
     background-color: #000;
     color: white;
-    font-family: 'Inter','Arial',sans-serif;
+    font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -11,7 +11,7 @@
     text-align: center;
     border: none;
     border-radius: 2px;
-    margin: 0 36px 37px;
+    margin: 18px 36px 37px;
     transition: 0.5s;
 }
 
@@ -24,6 +24,8 @@
     .popup__save-button {
         min-width: 238px;
         min-height: 46px;
-        margin: 0 22px 25px;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 15px 22px 25px;
     }
 }
