@@ -1,4 +1,4 @@
-.popup__profile {
+.popup__input {
     min-width: 358px;
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .popup__profile {
+    .popup__input {
         min-width: 238px;
     }
 }
