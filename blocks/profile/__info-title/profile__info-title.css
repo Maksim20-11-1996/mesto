@@ -15,11 +15,9 @@
 @media screen and (max-width: 767px) {
     .profile__info-title {
         max-width: 189px;
-        font-style: normal;
-        font-weight: 500;
         font-size: 27px;
         line-height: 33px;
         text-align: center;
-        margin: 0 auto 14px;
+        margin: 0 auto 11px auto;
     }
 }
