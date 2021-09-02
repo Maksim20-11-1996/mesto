@@ -26,7 +26,7 @@
                 <button type="button" class="profile__add-button"></button>
             </section>
             <section class="cards">
-                <div class="card">
+                <!-- <div class="card">
                     <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
                     <div class="card__title">
                         <h2 class="card__heading">Карачаевск</h2>
@@ -67,13 +67,13 @@
                         <h2 class="card__heading">Карачаево-Черкессия</h2>
                         <button type="button" class="card__like-button"></button>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">&#169; 2020. Mesto Russia</p>
         </footer>
-        <section class="popup">
+        <section class="popup" id="popup__edit-profile">
             <div class="popup__container">
                 <h2 class="popup__name">Редактировать профиль</h2>
                 <form class="popup__form" name="form">
@@ -81,10 +81,31 @@
                     <input type="text" class="popup__input popup__input_type_job" name="job">
                     <button type="submit" class="popup__save-button">Сохранить</button>
                 </form>
-                <button type="button" class="popup__close-button"></button>
+                <button type="button" class="popup__close-button" id="edit-profile__close-button"></button>
+            </div>
+        </section>
+        <section class="popup" id="popup__add-cards">
+            <div class="popup__container">
+                <h2 class="popup__name">Новое место</h2>
+                <form class="popup__form" name="form" id="add-cards__form">
+                    <input type="text" class="popup__input popup__input_type_name" name="name" placeholder="Название" id="add-cards__name">
+                    <input type="text" class="popup__input popup__input_type_img" name="img" placeholder="Ссылка на картинку">
+                    <button type="submit" class="popup__save-button">Сохранить</button>
+                </form>
+                <button type="button" class="popup__close-button" id="add-cards__close-button"></button>
             </div>
         </section>
     </div>
+    <template id="cards-template">
+        <div class="card">
+            <img class="card__image" src="">
+            <button class="card__remove-button"></button>
+            <div class="card__title">
+                <h2 class="card__heading"></h2>
+                <button type="button" class="card__like-button"></button>
+            </div>
+        </div>
+    </template>
     <script src="./scripts/index.js"></script>
 </body>
 
