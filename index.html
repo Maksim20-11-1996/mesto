@@ -26,54 +26,12 @@
                 <button type="button" class="profile__add-button"></button>
             </section>
             <section class="cards">
-                <!-- <div class="card">
-                    <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
-                    <div class="card__title">
-                        <h2 class="card__heading">Карачаевск</h2>
-                        <button type="button" class="card__like-button"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус">
-                    <div class="card__title">
-                        <h2 class="card__heading">Гора Эльбрус</h2>
-                        <button type="button" class="card__like-button"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай">
-                    <div class="card__title">
-                        <h2 class="card__heading">Домбай</h2>
-                        <button type="button" class="card__like-button"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус">
-                    <div class="card__title">
-                        <h2 class="card__heading">Гора Эльбрус</h2>
-                        <button type="button" class="card__like-button"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай">
-                    <div class="card__title">
-                        <h2 class="card__heading">Домбай</h2>
-                        <button type="button" class="card__like-button"></button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкессия">
-                    <div class="card__title">
-                        <h2 class="card__heading">Карачаево-Черкессия</h2>
-                        <button type="button" class="card__like-button"></button>
-                    </div>
-                </div> -->
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">&#169; 2020. Mesto Russia</p>
         </footer>
-        <section class="popup" id="popup__edit-profile">
+        <section class="popup popup__edit-profile">
             <div class="popup__container">
                 <h2 class="popup__name">Редактировать профиль</h2>
                 <form class="popup__form" name="form">
@@ -84,7 +42,7 @@
                 <button type="button" class="popup__close-button" id="edit-profile__close-button"></button>
             </div>
         </section>
-        <section class="popup" id="popup__add-cards">
+        <section class="popup popup__add-cards">
             <div class="popup__container">
                 <h2 class="popup__name">Новое место</h2>
                 <form class="popup__form" name="form" id="add-cards__form">
@@ -95,11 +53,18 @@
                 <button type="button" class="popup__close-button" id="add-cards__close-button"></button>
             </div>
         </section>
+        <section class="popup popup__open-image">
+            <div class="popup__open-image_container">
+                <button type="button" class="popup__close-button" id="popup__open-image_close-button"></button>
+                <img class="popup__open-image_picture">
+                <h2 class="popup__open-image_name"></h2>
+            </div>
+        </section>
     </div>
     <template id="cards-template">
         <div class="card">
-            <img class="card__image" src="">
             <button class="card__remove-button"></button>
+            <img class="card__image">
             <div class="card__title">
                 <h2 class="card__heading"></h2>
                 <button type="button" class="card__like-button"></button>

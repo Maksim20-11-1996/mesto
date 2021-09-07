@@ -1,13 +1,13 @@
 .cards {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto 47px;
+    gap: 20px 17px;
+    margin-bottom: 67px;
 }
 
 @media screen and (max-width: 1023px) {
     .cards {
         justify-content: space-around;
-        margin-bottom: 28px;
+        margin-bottom: 48px;
     }
 }

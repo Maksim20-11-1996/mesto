@@ -1,0 +1,6 @@
+.popup__open-image_container {
+    margin: auto;
+    position: relative;
+    color: white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}

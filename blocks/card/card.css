@@ -2,6 +2,6 @@
     border-radius: 10px;
     max-width: 282px;
     background-color: white;
-    margin-bottom: 20px;
     overflow: hidden;
+    position: relative;
 }
