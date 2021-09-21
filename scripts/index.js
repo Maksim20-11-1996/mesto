@@ -45,7 +45,7 @@ const allPopups = document.querySelectorAll('.popup');
 const openPopup = function(popup) {
     popup.classList.add('popup_is-opened');
     document.addEventListener('keydown', closePopupByEscape);
-    document.addEventListener('mousedown', closePopupByOverlay);
+    document.addEventListener('click', closePopupByOverlay);
     popup.querySelector('.popup__button').classList.add('popup__button_disabled');
     popup.querySelector('.popup__button').setAttribute('disabled', true);
 };
@@ -54,7 +54,7 @@ const openPopup = function(popup) {
 const closePopup = function(popup) {
     popup.classList.remove('popup_is-opened');
     document.removeEventListener('keydown', closePopupByEscape);
-    document.removeEventListener('mousedown', closePopupByOverlay);
+    document.removeEventListener('click', closePopupByOverlay);
 };
 
 function closePopupByEscape(evt) {
