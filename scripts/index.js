@@ -46,8 +46,6 @@ const openPopup = function(popup) {
     popup.classList.add('popup_is-opened');
     document.addEventListener('keydown', closePopupByEscape);
     document.addEventListener('mousedown', closePopupByOverlay);
-    popup.querySelector('.popup__button').classList.add('popup__button_disabled');
-    popup.querySelector('.popup__button').setAttribute('disabled', true);
 };
 
 
@@ -131,6 +129,7 @@ const openImagePopup = (card) => {
 
 popupOpenImageCloseButton.addEventListener('click', () => closePopup(popupOpenImage));
 
+    
 const addCardsFormHandler = (event) => {
     event.preventDefault();
     addCards({
@@ -139,7 +138,8 @@ const addCardsFormHandler = (event) => {
     }, cardsElement);
     addCardsFormElement.reset();
     closePopup(popupAddCards);
-
+    addCardsFormElement.querySelector('.popup__button').classList.add('popup__button_disabled');
+    addCardsFormElement.querySelector('.popup__button').setAttribute('disabled', true);
 };
 
 addCardsFormElement.addEventListener('submit', addCardsFormHandler);
