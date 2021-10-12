@@ -1,3 +1,6 @@
+import { Card } from './Card.js';
+import { FormValidator } from './FormValidator.js';
+
 const initialCards = [{
         name: 'Архыз',
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -29,6 +32,8 @@ const initialCards = [{
     }
 ];
 
+
+
 const profileInfoTitle = document.querySelector('.profile__info-title');
 const profileInfoSubtitle = document.querySelector('.profile__info-subtitle');
 const popupEditOpenButton = document.querySelector('.profile__edit-button');
@@ -40,7 +45,7 @@ const popupInputSubtitleElement = popupEditProfile.querySelector('.popup__input_
 const popupAddCardsOpenButton = document.querySelector('.profile__add-button');
 const popupAddCards = document.querySelector('.popup_add-cards');
 const popupAddCardsCloseButton = document.getElementById('add-cards__close-button');
-
+const cardsTemplate = document.querySelector('#cards-template').content;
 
 export const openPopup = function(popup) {
     popup.classList.add('popup_is-opened');
@@ -85,25 +90,32 @@ function submitProfileForm(evt) {
 };
 
 const addCardsFormElement = document.querySelector('#add-cards__form');
+const addCardsNameElement = addCardsFormElement.querySelector('#name-card');
+const addCardsImageElement = addCardsFormElement.querySelector('.popup__input_type_img');
+const addCardsSubmitButton = addCardsFormElement.querySelector('.popup__button');
+const cardsSection = document.querySelector('.cards');
 const popupOpenImage = document.querySelector('#popup_open-image');
 const popupOpenImageCloseButton = document.getElementById('popup__open-image_close-button');
 popupOpenImageCloseButton.addEventListener('click', () => closePopup(popupOpenImage));
 
-import { Card } from './Card.js';
+const addCards = (item) => {
+    const card = new Card(item.name, item.link, cardsTemplate)
+    cardsSection.prepend(card.createCard());
+}
 
 initialCards.forEach((item) => {
-    const elem = new Card(item.name, item.link);
-    elem.addCards();
+    addCards(item);
 });
 
-addCardsFormElement.addEventListener('submit', () => {
-    const addCardsNameElement = addCardsFormElement.querySelector('#name-card').value;
-    const addCardsImageElement = addCardsFormElement.querySelector('.popup__input_type_img').value;
-    const addedCard = new Card(addCardsNameElement, addCardsImageElement);
-    addedCard.addCardsFormHandler();
-})
-
-import { FormValidator } from './FormValidator.js';
+const addCardsFormHandler = () => {
+    addCards({
+        name: addCardsNameElement.value,
+        link: addCardsImageElement.value
+    }, cardsSection);
+    addCardsFormElement.reset();
+    closePopup(popupAddCards);
+    addCardsFormValidator.disableSubmitButton(addCardsSubmitButton);
+};
 
 const listSelector = ({
     formSelector: '.popup__form',
@@ -119,3 +131,7 @@ editProfileFormValidator.setEventListeners();
 
 const addCardsFormValidator = new FormValidator(listSelector, addCardsFormElement);
 addCardsFormValidator.setEventListeners();
+
+addCardsFormElement.addEventListener('submit', () => {
+    addCardsFormHandler();
+})
