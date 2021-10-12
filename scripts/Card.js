@@ -1,16 +1,15 @@
 import { openPopup } from "./index.js";
-import { closePopup } from "./index.js";
 
 export class Card {
-    constructor(name, link, template) {
+    constructor(name, link) {
         this._name = name;
         this._link = link;
-        this._template = template;
+        this._template = '#cards-template';
     }
 
     _getTemplate() {
-        this._template.content;
-        return this._template;
+        const cardTemplate = document.querySelector(this._template).content;
+        return cardTemplate;
     }
 
     _removeCardsHandler() {
@@ -26,7 +25,9 @@ export class Card {
     }
 
     createCard = () => {
-        this._element = this._template.querySelector('.card').cloneNode(true);
+        this._element = this._getTemplate()
+            .querySelector('.card')
+            .cloneNode(true);
         this._image = this._element.querySelector('.card__image');
         this._element.querySelector('.card__heading').textContent = this._name;
         this._image.src = this._link;

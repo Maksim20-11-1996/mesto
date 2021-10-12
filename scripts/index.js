@@ -99,7 +99,7 @@ const popupOpenImageCloseButton = document.getElementById('popup__open-image_clo
 popupOpenImageCloseButton.addEventListener('click', () => closePopup(popupOpenImage));
 
 const addCards = (item) => {
-    const card = new Card(item.name, item.link, cardsTemplate)
+    const card = new Card(item.name, item.link)
     cardsSection.prepend(card.createCard());
 }
 
