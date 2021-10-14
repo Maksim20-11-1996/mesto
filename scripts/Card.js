@@ -1,15 +1,19 @@
 import { openPopup } from "./index.js";
 
 export class Card {
-    constructor(name, link) {
-        this._name = name;
-        this._link = link;
-        this._template = '#cards-template';
+    constructor(data, templateSelector) {
+        this._name = data.name;
+        this._link = data.link;
+        this._templateSelector = templateSelector;
     }
 
     _getTemplate() {
-        const cardTemplate = document.querySelector(this._template).content;
-        return cardTemplate;
+        const cardElement = document
+            .querySelector(this._templateSelector)
+            .content
+            .querySelector('.card')
+            .cloneNode(true);
+        return cardElement;
     }
 
     _removeCardsHandler() {
@@ -25,9 +29,7 @@ export class Card {
     }
 
     createCard = () => {
-        this._element = this._getTemplate()
-            .querySelector('.card')
-            .cloneNode(true);
+        this._element = this._getTemplate();
         this._image = this._element.querySelector('.card__image');
         this._element.querySelector('.card__heading').textContent = this._name;
         this._image.src = this._link;

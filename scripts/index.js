@@ -98,13 +98,13 @@ const popupOpenImage = document.querySelector('#popup_open-image');
 const popupOpenImageCloseButton = document.getElementById('popup__open-image_close-button');
 popupOpenImageCloseButton.addEventListener('click', () => closePopup(popupOpenImage));
 
-const addCards = (item) => {
-    const card = new Card(item.name, item.link)
+const addCards = (data) => {
+    const card = new Card(data, '#cards-template')
     cardsSection.prepend(card.createCard());
 }
 
-initialCards.forEach((item) => {
-    addCards(item);
+initialCards.forEach((data) => {
+    addCards(data);
 });
 
 const addCardsFormHandler = () => {
