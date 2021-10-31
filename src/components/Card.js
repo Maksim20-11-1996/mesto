@@ -26,13 +26,12 @@ export class Card {
         this._image.src = this._link;
         this._image.alt = this._name;
         this._element.querySelector('.card__remove-button').addEventListener('click', () => this._removeCardsHandler());
+        this._element.querySelector('.card__like-button').addEventListener('click', this._cardLike);
         this._image.addEventListener('click', () => this.handleCardClick(this._name, this._link));
         return this._element;
     }
 
-    cardLike = () => {
-        this._element.querySelector('.card__like-button').addEventListener('click', function(event) {
-            event.target.classList.toggle('card__like-button_active');
-        });
+    _cardLike = (event) => {
+        event.target.classList.toggle('card__like-button_active');
     }
 }

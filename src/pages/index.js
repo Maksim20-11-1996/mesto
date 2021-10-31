@@ -48,7 +48,6 @@ const createCard = (data) => {
         },
         '#cards-template');
     const cardElement = card.createCard();
-    card.cardLike();
     return cardElement;
 };
 
