@@ -3,14 +3,11 @@ import { Card } from '../components/Card.js';
 import { FormValidator } from '../components/FormValidator.js';
 import { initialCards } from '../utils/initialCards.js';
 import { Section } from '../components/Section.js';
-import { Popup } from '../components/Popup.js';
-import { UserInfo } from '../components/UserInfo.js'
+import { UserInfo } from '../components/UserInfo.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { PopupWithImage } from '../components/PopupWithImage.js';
 
 const popupOpenImage = new PopupWithImage('#popup_open-image');
-const popupEditProfile = new Popup('.popup_edit-profile');
-const popupAddCards = new Popup('.popup_add-cards');
 
 const profileInfoTitle = document.querySelector('.profile__info-title');
 const profileInfoSubtitle = document.querySelector('.profile__info-subtitle');
@@ -39,7 +36,7 @@ popupEditOpenButton.addEventListener('click', function() {
     const userData = userInfo.getUserInfo();
     popupInputTitleElement.value = userData.name;
     popupInputSubtitleElement.value = userData.about;
-    popupEditProfile.open()
+    formEditProfile.open()
 });
 
 const createCard = (data) => {
@@ -51,6 +48,7 @@ const createCard = (data) => {
         },
         '#cards-template');
     const cardElement = card.createCard();
+    card.cardLike();
     return cardElement;
 };
 
@@ -76,13 +74,13 @@ const formAddCards = new PopupWithForm({
             link: addCardsImageElement.value,
             name: addCardsNameElement.value
         })
-        cardsSection.prepend(newCard);
+        cardList.addItem(newCard);
         addCardsFormValidator.disableSubmitButton(addCardsSubmitButton);
     }
 });
 formAddCards.setEventListeners();
 
-popupAddCardsOpenButton.addEventListener('click', () => popupAddCards.open());
+popupAddCardsOpenButton.addEventListener('click', () => formAddCards.open());
 
 
 const listSelector = ({
