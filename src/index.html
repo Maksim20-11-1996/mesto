@@ -32,12 +32,12 @@
         </footer>
         <section class="popup popup_edit-profile">
             <div class="popup__container">
-                <form class="popup__form" name="edit-profile" id="edit-profile__form" novalidate>
+                <form class="popup__form" id="edit-profile__form" name="edit-profile" novalidate>
                     <h2 class="popup__name">Редактировать профиль</h2>
                     <input type="text" class="popup__input popup__input_type_name" id="user-name" name="name" required minlength="2" maxlength="40">
                     <span id="user-name-error" class="error"></span>
                     <input type="text" class="popup__input popup__input_type_job" id="user-job" name="about" required minlength="2" maxlength="200">
-                    <span id="job-error" class="error"></span>
+                    <span id="user-job-error" class="error"></span>
                     <button type="submit" class="popup__button popup__button_disabled">Сохранить</button>
                 </form>
                 <button type="button" class="popup__close-button" id="edit-profile__close-button"></button>

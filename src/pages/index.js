@@ -55,7 +55,6 @@ const addCardsFormElement = document.querySelector('#add-cards__form');
 const addCardsNameElement = addCardsFormElement.querySelector('#name-card');
 const addCardsImageElement = addCardsFormElement.querySelector('.popup__input_type_img');
 const addCardsSubmitButton = addCardsFormElement.querySelector('.popup__button');
-const cardsSection = document.querySelector('.cards');
 
 const cardList = new Section({
     items: initialCards,
