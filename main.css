@@ -371,7 +371,7 @@ template {
 .page {
     position: relative;
     min-height: 100vh;
-    background-color: goldenrod;
+    background-color: #000000;
     background-size: cover;
     color: #FFFFFF;
     font-family: 'Inter', 'Arial', sans-serif;
