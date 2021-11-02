@@ -6,6 +6,15 @@ import { Section } from '../components/Section.js';
 import { UserInfo } from '../components/UserInfo.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { PopupWithImage } from '../components/PopupWithImage.js';
+import { Api } from '../components/Api.js';
+
+const api = new Api({
+    url: 'https://mesto.nomoreparties.co/v1/cohort-29/',
+    headers: {
+        authorization: "2f7e7ca3-ec2b-4f0a-a43d-a3ce0f75fcac",
+        "content-type": "application/json"
+    }
+});
 
 const popupOpenImage = new PopupWithImage('#popup_open-image');
 
@@ -79,7 +88,6 @@ const formAddCards = new PopupWithForm({
 formAddCards.setEventListeners();
 
 popupAddCardsOpenButton.addEventListener('click', () => formAddCards.open());
-
 
 const listSelector = ({
     formSelector: '.popup__form',
