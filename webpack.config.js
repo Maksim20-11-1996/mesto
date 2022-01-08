@@ -19,6 +19,7 @@ module.exports = {
         port: 8081,
         open: true
     },
+    devtool: 'source-map',
     module: {
         rules: [{
                 test: /\.js$/,

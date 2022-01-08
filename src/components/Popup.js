@@ -6,6 +6,7 @@ export class Popup {
     open() {
         document.addEventListener('click', () => this.setEventListeners);
         document.addEventListener('keyup', this._handleEscClose);
+        this.renderLoading(false)
         this._popupElement.classList.add('popup_is-opened');
 
     }
@@ -19,6 +20,15 @@ export class Popup {
     _handleEscClose = (event) => {
         if (event.key === 'Escape') {
             this.close();
+        }
+    }
+
+    renderLoading = (loading) => {
+        const saveButton = this._popupElement.querySelector('.popup__button')
+        if (loading) {
+            saveButton.textContent = 'Сохранение...'
+        } else {
+            saveButton.textContent = 'Сохранить'
         }
     }
 

@@ -5,8 +5,11 @@
     background-image: url(../../../images/like-button-min.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: transparent;
     transition: 0.5s;
+    position: absolute;
+    right: 20px;
+    bottom: 38px;
 }
 
 .card__like-button:hover {

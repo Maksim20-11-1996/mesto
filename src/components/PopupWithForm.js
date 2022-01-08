@@ -10,6 +10,7 @@ export class PopupWithForm extends Popup {
         this._popupElement.querySelector('.popup__form').addEventListener('submit', (event) => {
             event.preventDefault();
             this._handleFormSubmit(this._getInputValues())
+            this.renderLoading(true)
             this.close()
         });
         super.setEventListeners();

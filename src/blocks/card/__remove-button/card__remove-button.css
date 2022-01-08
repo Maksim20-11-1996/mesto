@@ -1,4 +1,5 @@
 .card__remove-button {
+    display: block;
     border: none;
     width: 18px;
     height: 19.3px;

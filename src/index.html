@@ -15,6 +15,7 @@
         <main class="content">
             <section class="profile">
                 <img class="profile__image" src="<%=require('./images/image.jpg')%>" alt="Жак-Ив Кусто">
+                <button class="profile__avatar-button"></button>
                 <div class="profile__info">
                     <div class="profile__info-add">
                         <h1 class="profile__info-title">Жак-Ив Кусто</h1>
@@ -56,6 +57,26 @@
                 <button type="button" class="popup__close-button" id="add-cards__close-button"></button>
             </div>
         </section>
+        <section class="popup popup_edit-avatar">
+            <div class="popup__container">
+                <form class="popup__form" id="edit-avatar__form" name="edit-avatar" novalidate>
+                    <h2 class="popup__name">Обновить аватар</h2>
+                    <input type="url" class="popup__input popup__input_type_avatar" id="user-avatar" name="avatar">
+                    <span id="user-avatar-error" class="error"></span>
+                    <button type="submit" class="popup__button popup__button_disabled">Сохранить</button>
+                </form>
+                <button type="button" class="popup__close-button" id="edit-profile__close-button"></button>
+            </div>
+        </section>
+        <section class="popup popup_delete-cards">
+            <div class="popup__container">
+                <form class="popup__form" name="delete-cards" id="delete-cards__form" novalidate>
+                    <h2 class="popup__name">Вы уверены?</h2>
+                    <button type="submit" class="popup__button">Да</button>
+                </form>
+                <button type="button" class="popup__close-button" id="add-cards__close-button"></button>
+            </div>
+        </section>
         <section class="popup" id="popup_open-image">
             <div class="popup__image-container">
                 <button type="button" class="popup__close-button" id="popup__open-image_close-button"></button>
@@ -71,6 +92,7 @@
             <div class="card__title">
                 <h2 class="card__heading"></h2>
                 <button type="button" class="card__like-button"></button>
+                <div class="card__like-meter"></div>
             </div>
         </div>
     </template>

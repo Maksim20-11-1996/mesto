@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto 51px;
-    /* border: 1px solid red; */
+    position: relative;
 }
 
 @media screen and (max-width: 767px) {
